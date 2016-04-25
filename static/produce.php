@@ -7,7 +7,7 @@
  */
 global $dir;
 global $id;
-echo 'select * from products where id=' . $id;
+
 $DB = new DB();
 $DB->Query('select * from products where id=' . $id);
 $DB->close();
@@ -28,7 +28,7 @@ if ($DB->numRows() == 1) {
                     <h1 class="title" title="<?=$rowProduct['name'];?>"><?=$rowProduct['name'];?></h1>
                     <div class="panel-body">
                         <p class="navigation-bar">
-                            <a href="/">К списку наименований</a>
+<!--                            <a href="/">К списку наименований</a>-->
                         </p>
                         <div style="width:100%; display:table; margin-top:20px;">
                             <div class="detailed-picture" style="float:left;margin-right:20px;margin-bottom:20px;">
@@ -44,7 +44,7 @@ if ($DB->numRows() == 1) {
                             <table cellpadding="0" cellspacing="0" class="totals" style="float:right">
                                 <tr><td><strong>Старая цена:</strong></td><td><?=$rowProduct['price'];?></td></tr>
                                 <tr><td><strong>Скидка:</strong></td><td>5%</td></tr>
-                                <tr><td style="font-size:120%;"><strong>Новая цена:</strong></td><td style="font-size:120%;">2085,00 руб</td></tr>
+                                <tr><td style="font-size:120%;"><strong>Новая цена:</strong></td><td style="font-size:120%;"><?=$rowProduct['price'] * 0.95;?> руб</td></tr>
                             </table>
                             <br /><br /><br /><br />
                         </div>

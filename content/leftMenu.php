@@ -19,38 +19,12 @@
                     $DB->close();
                     if ($DB->numRows()) {
                         while ($row = $DB->fetchArray()) {
-                            echo "<li class='li-all-items " . (strripos( $_SERVER['REQUEST_URI'], $row['url']) != false ? 'selected' : '') ."'><a href='/{$row['url']}'>{$row['name']}</a></li>";
+                            echo "<li class='li-all-items " . (strripos( $_SERVER['REQUEST_URI'], $row['url']) != false ? 'selected' : '') ."'><a href='/{$row['id']}-{$row['url']}/'>{$row['name']}</a></li>";
                         }
                     } else {
                         echo '<li>На данный момент сайт пустой</li>';
                     }
                     ?>
-                    <li class="li-all-items selected"><a href="/default.htm">Весь каталог</a></li>
-
-                    <li class="li-286341517"><a href="_25d0_259a_25d0_25b0_25d1_2582_25d0_25b0_25d0_25bb_25d0_25be_25d0_25b3-_25d1_2582_25d0_25be_25d0_25b06307a4db1">Новинки</a>
-
-                    </li>
-
-                    <li class="li-286341516"><a href="_25d0_259a_25d0_25b0_25d1_2582_25d0_25b0_25d0_25bb_25d0_25be_25d0_25b3-_25d1_2582_25d0_25be_25d0_25b05634a0db4">Уход за кожей</a>
-
-                    </li>
-
-                    <li class="li-286341519"><a href="_25d0_259a_25d0_25b0_25d1_2582_25d0_25b0_25d0_25bb_25d0_25be_25d0_25b3-_25d1_2582_25d0_25be_25d0_25b02a806edb2">Уход за телом</a>
-
-                    </li>
-
-                    <li class="li-286341518"><a href="_25d0_259a_25d0_25b0_25d1_2582_25d0_25b0_25d0_25bb_25d0_25be_25d0_25b3-_25d1_2582_25d0_25be_25d0_25b0da9e96dac">Декоративная косметика</a>
-
-                    </li>
-
-                    <li class="li-286341553"><a href="_25d0_259a_25d0_25b0_25d1_2582_25d0_25b0_25d0_25bb_25d0_25be_25d0_25b3-_25d1_2582_25d0_25be_25d0_25b09e2070db2">Для него</a>
-
-                    </li>
-
-                    <li class="li-286341552"><a href="_25d0_259a_25d0_25b0_25d1_2582_25d0_25b0_25d0_25bb_25d0_25be_25d0_25b3-_25d1_2582_25d0_25be_25d0_25b0797ec9dcd">Для нее</a>
-
-                    </li>
-
                 </ul>
             </div>
         </div>

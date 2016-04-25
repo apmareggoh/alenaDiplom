@@ -103,7 +103,7 @@ class DB
 
     public function Connect()
     {
-        $this->link = mysqli_connect($this->Host, $this->User, $this->Password, $this->DBName) or $this->saveToLog(mysqli_connect_error(), 1);
+        $this->link = mysqli_connect($this->Host, $this->User, $this->Password, $this->DBName);
     }
 
     public function setCharset() {
