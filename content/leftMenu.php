@@ -19,7 +19,7 @@
                     $DB->close();
                     if ($DB->numRows()) {
                         while ($row = $DB->fetchArray()) {
-                            echo "<li class='li-all-items " . (in_array($row['url'], $_SERVER['REQUEST_URI']) != false ? 'selected' : '') ."'><a href='/{$row['url']}'>{$row['name']}</a></li>";
+                            echo "<li class='li-all-items " . (strripos( $_SERVER['REQUEST_URI'], $row['url']) != false ? 'selected' : '') ."'><a href='/{$row['url']}'>{$row['name']}</a></li>";
                         }
                     } else {
                         echo '<li>На данный момент сайт пустой</li>';

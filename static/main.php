@@ -77,7 +77,7 @@ global $dir;
 
                                 <div Style="margin-bottom:0px;min-height:170px;">
                                     <div Style="margin: 0px 20px 10px 0px;float:left;">
-                                        <a class="mphoto box" style="width:150px;height:150px;" href="/product.php" title="Парфюм">
+                                        <a class="mphoto box" style="width:150px;height:150px;" href="/product1/" title="Парфюм">
                                             <img style="width:150px;height:150px;" src="users/3319/photos/catalog/a18f852c-bf41-496c-9106-4073c55b64ec.jpg" alt="Парфюм" title="Парфюм" />
                                         </a>
                                     </div>

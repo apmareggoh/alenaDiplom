@@ -19,22 +19,22 @@ require_once($dir . '/class/bd.php');
     <meta name="keywords" content="" />
     <meta name="description" content="" />
 
-    <link rel="shortcut icon" href="users/3319/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="css/reset.css@7.css" />
-    <link rel="stylesheet" type="text/css" href="js/shadowbox/shadowbox.css" />
+    <link rel="shortcut icon" href="/users/3319/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/css/reset.css@7.css" />
+    <link rel="stylesheet" type="text/css" href="/js/shadowbox/shadowbox.css" />
 
-    <link rel="stylesheet" type="text/css" href="users/3319/css/global.css" />
-    <link rel="stylesheet" type="text/css" href="css/gallery.css@7.css" />
-    <!--[if IE]><link rel="stylesheet" type="text/css" href="css/ie.css@7.css" /><![endif]-->
+    <link rel="stylesheet" type="text/css" href="/users/3319/css/global.css" />
+    <link rel="stylesheet" type="text/css" href="/css/gallery.css@7.css" />
+    <!--[if IE]><link rel="stylesheet" type="text/css" href="/css/ie.css@7.css" /><![endif]-->
 
-    <script type="text/javascript" src="js/prototype.js"></script>
-    <script type="text/javascript" src="js/scriptaculous.js@load=effects,builder.js"></script>
-    <script type="text/javascript" src="js/shadedborder.js"></script>
-    <script type="text/javascript" src="js/global.js@7.js"></script>
+    <script type="text/javascript" src="/js/prototype.js"></script>
+    <script type="text/javascript" src="/js/scriptaculous.js@load=effects,builder.js"></script>
+    <script type="text/javascript" src="/js/shadedborder.js"></script>
+    <script type="text/javascript" src="/js/global.js@7.js"></script>
 
-    <script type="text/javascript" src="js/rboxes/cssquery2-p.js"></script>
-    <script type="text/javascript" src="js/rboxes/ruzeeborders.js"></script>
-    <script type="text/javascript" src="js/shadowbox/shadowbox.js"></script>
+    <script type="text/javascript" src="/js/rboxes/cssquery2-p.js"></script>
+    <script type="text/javascript" src="/js/rboxes/ruzeeborders.js"></script>
+    <script type="text/javascript" src="/js/shadowbox/shadowbox.js"></script>
 </head>
 
 <body>
