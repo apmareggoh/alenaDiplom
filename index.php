@@ -1,5 +1,7 @@
 <?php
- require_once($_SERVER['DOCUMENT_ROOT'] . '/class/class_template.php');
-$page = new Page();
+$dir = $_SERVER['DOCUMENT_ROOT'];
+require_once($dir . '/content/header.php');
+require_once($dir . '/static/main.php');
+require_once($dir . '/content/footer.php');
 ?>
 

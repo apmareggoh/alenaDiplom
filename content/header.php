@@ -5,6 +5,8 @@
  * Date: 07.04.2016
  * Time: 0:48
  */
+global $dir;
+require_once($dir . '/class/bd.php');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!-- saved from url=(0067)http://cosmetika4.sites.xn--80aagbla3am5aqmo9n.xn--p1ai/default.htm --><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 
@@ -40,33 +42,22 @@
 <div id="outer">
     <div class="closed-margin">
         <div class="closed-box" id="closed_box">
-
-
             <div id="header" class="pnged">
                 <a id="logo" href="/" title="Магазин Косметики">
                     Магазин лаков
-
                 </a>
-
                 <div id="phone"><span>+7 (495)</span> 123-45-67</div>
                 <div id="slogan">Магазин лаков и маникюрных принадлежностей</div>
                 <div id="cart"><a href="_25d0_2590_25d0_25ba_25d0_25ba_25d0_25b0_25d1_2583_25d0_25bd_25d1_2582/_25d0_259a_25d0_25be_25d1_2580b28fb9158.htm">Корзина покупок</a></div>
                 <div id="img_h"></div>
-
-
-
-
             </div>
-
-
-
 
             <div class="tmenu pnged">
                 <div class="hmenu-container">
                     <ul id="page_tabs" class="page_tabs">
 
                         <li id="menu_item_43822" class="mli activelink pnged">
-                            <a href="default.htm">Главная</a>
+                            <a href="/">Главная</a>
 
                         </li>
 

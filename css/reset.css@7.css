@@ -134,7 +134,11 @@ a.sitelinkbutton:hover { background: #ccc; color: #000 !important; -moz-transfor
 a.more { font-weight: bold; }
 
 div.tabled-vertical-separator { margin-bottom:40px; width:100%; display:table; }
-img.detailed-photo { padding: 5px 5px 5px 5px; background:#fff; }
+img.detailed-photo {
+    padding: 5px 5px 5px 5px;
+    background:#fff;
+    width: 300px;
+}
 div.panel-body p.navigation-bar { font-weight:bold; } 
 
 
