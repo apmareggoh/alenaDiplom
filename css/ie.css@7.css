@@ -1,0 +1,16 @@
+div#pagebody {min-height: 100%;height: 100%;}
+
+div.vmenu {
+	display: inline-block;
+}
+div.vmenu ul.page_tabs li {
+	width: 100%;
+    float: left;
+}
+
+div.adm-layout-columns table { width: 100%; border-collapse:collapse; }
+div.adm-layout-columns table td.td-btn { width: 23%; }
+div.adm-layout-columns table td.td-sep { width: 2%; }
+
+table { border-collapse:collapse; }
+div.panel { border-collapse:separate; }
