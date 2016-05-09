@@ -45,6 +45,8 @@ function translit($str)
     <!--[if IE]><link rel="stylesheet" type="text/css" href="/css/ie.css@7.css" /><![endif]-->
 
     <script type="text/javascript" src="/js/prototype.js"></script>
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/global.js"></script>
     <script type="text/javascript" src="/js/scriptaculous.js@load=effects,builder.js"></script>
     <script type="text/javascript" src="/js/shadedborder.js"></script>
     <script type="text/javascript" src="/js/global.js@7.js"></script>

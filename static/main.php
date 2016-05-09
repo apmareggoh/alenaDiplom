@@ -47,7 +47,7 @@ if ($DB->numRows() == 0) {
 
                                         <p class='blog-info' Style='font-weight:bold;'>Есть в наличии</p>
                                         <p class='blog-text' Style='font-weight:bold;'>
-                                            <a href='/' class='lnk-products-list-addtocart'>В корзину</a>
+                                            <a href='javascript:void(0);' data-id='{$rowProduct['id']}' class='lnk-products-list-addtocart addInOrder'>В корзину</a>
 
                                             <span class='discount-price'>{$rowProduct['price']}</span> <span class='end-price'>" . ($rowProduct['price'] * 0.95) . "</span> руб
                                         </p>

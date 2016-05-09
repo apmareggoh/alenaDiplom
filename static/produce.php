@@ -49,7 +49,7 @@ if ($DB->numRows() == 1) {
                             <br /><br /><br /><br />
                         </div>
                         <div id="ctl00_MainContent_ctl00_ctl00_pnlMsg" class="blog-preview item-already-in-the-shopping-cart">
-                            <p class="blog-text"><strong>&laquo;<?=$rowProduct['name'];?>&raquo;</strong>  в корзине! Перейти в <a href="trash.htm">корзину покупок</a></p>
+                            <p class="blog-text">Добавить в корзину</p>
                         </div>
                     </div>
                 </div>

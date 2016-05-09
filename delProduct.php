@@ -10,6 +10,7 @@ session_start();
 $dir = $_SERVER['DOCUMENT_ROOT'];
 require_once($dir . '/class/bd.php');
 $DB = new DB();
-$DB->Query("insert into baskets(id_user, id_product, cnt) values ('" . session_id() . "', {$_GET['id']}, {$_GET['cnt']})");
+echo "delete from baskets where id={$_GET['id']}";
+$DB->Query("delete from baskets where id={$_GET['id']}");
 $DB->close();
 ?>
