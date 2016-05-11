@@ -54,7 +54,7 @@ if ($DB->numRows() == 0) {
 
                                     <div class='blog-preview'>
 
-                                        <p class='blog-title'><a href='{$rowProduct['id']}-" . translit($rowProduct['name']) . "/'>{$rowProduct['name']}</a></p>
+                                        <p class='blog-title'><a href='{$rowProduct['id']}-" . translit($rowProduct['name']) . "/'>{$rowProduct['name']} ({$rowProduct['cnt']})</a></p>
                                         <p class='blog-text'>
                                             {$rowProduct['anons']}
                                             <a class='more more-items' href='{$rowProduct['id']}-" . translit($rowProduct['name']) . "/'>подробнее &raquo;</a>

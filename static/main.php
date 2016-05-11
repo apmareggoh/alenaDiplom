@@ -9,45 +9,47 @@ global $dir;
 global $id;
 $res = '';
 $DB = new DB();
-if ($id) {
-    $DB->Query('select * from products where id_category=' . $id);
-    echo 'select * from products where id_category=' . $id;
-} else {
-    $DB->Query('select * from products p left JOIN categories c where p.id_category = c.id');
-}
+$DB->Query('CALL getProduct(' . (isset($id) ? $id : 'null') .')');
 $DB->close();
 if ($DB->numRows() == 0) {
-    $res = "404 блеать!";
+    $res = "no tovar";
 } else {
     while ($rowProduct = $DB->fetchArray()) {
+        $DB2 = new DB();
+        $DB2->Query('select * from baskets b left JOIN products p on p.id = b.id_product where b.id_user="' . session_id() . '" and b.id_product=' . $rowProduct['id']);
+        if ($DB2->numRows()) {
+            $text = 'В корзине';
+            $cnt = $DB2->fetchArray();
+            $cnt = $cnt['cnt'];
+            $class = '';
+            $link = '/order.php';
+        } else {
+            $text = 'В корзину';
+            $cnt = 1;
+            $class = 'addInOrder';
+            $link = 'javascript:void(0);';
+        }
        $res .= "
                             <div class='basic-other-products-item  adv-other-products-item-286334510'>
-
-
                                 <div Style='margin-bottom:0px;min-height:170px;'>
                                     <div Style='margin: 0px 20px 10px 0px;float:left;'>
                                         <a class='mphoto box' style='width:150px;height:150px;' href='{$rowProduct['url']}/' title='{$rowProduct['name']}'>
                                             <img style='width:150px;height:150px;' src='/img/product/{$rowProduct['image']}' alt='{$rowProduct['name']}' title='{$rowProduct['name']}' />
                                         </a>
                                     </div>
-
                                     <div class='blog-preview'>
-
                                         <p class='blog-title'><a href='{$rowProduct['id']}-" . translit($rowProduct['name']) . "/'>{$rowProduct['name']}</a></p>
                                         <p class='blog-text'>
                                             {$rowProduct['anons']}
                                             <a class='more more-items' href='{$rowProduct['id']}-" . translit($rowProduct['name']) . "/'>подробнее &raquo;</a>
                                         </p>
                                         <p class='blog-info' Style='font-weight:bold;'>
-
-
-
                                         </p>
-
-
                                         <p class='blog-info' Style='font-weight:bold;'>Есть в наличии</p>
                                         <p class='blog-text' Style='font-weight:bold;'>
-                                            <a href='javascript:void(0);' data-id='{$rowProduct['id']}' class='lnk-products-list-addtocart addInOrder'>В корзину</a>
+                                        <label for='count_{$rowProduct['id']}'>Колво</label>
+                                        <input style='width:20px;' name='count' id='count_{$rowProduct['id']}' value='{$cnt}'>
+                                            <a href='{$link}' data-id='{$rowProduct['id']}' class='lnk-products-list-addtocart {$class}'>{$text}</a>
 
                                             <span class='discount-price'>{$rowProduct['price']}</span> <span class='end-price'>" . ($rowProduct['price'] * 0.95) . "</span> руб
                                         </p>

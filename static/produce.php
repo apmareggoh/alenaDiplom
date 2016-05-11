@@ -14,7 +14,7 @@ $DB->close();
 if ($DB->numRows() == 1) {
     $rowProduct = $DB->fetchArray();
 } else {
-    exit('<li>404 блеать!</li>');
+    exit('<li>no tovar</li>');
 }
 ?>
 <div class="main-area" id="main_area">

@@ -1,19 +1,17 @@
 /**
- * Created by ���������� on 09.05.2016.
+ * Created by армагеддон on 09.05.2016.
  */
 
 function addProduct(e) {
     var id = $(e).data('id');
-    console.log(id);
     $.ajax({
         url: '/addProduct.php',
-        data: 'id=' + id + '&cnt=1'
+        data: 'id=' + id + '&cnt=' + $('#count_' + id).val()
     });
 }
 
 function delProduct(e) {
     var id = $(e).data('id');
-    console.log(id);
     $.ajax({
         url: '/delProduct.php',
         data: 'id=' + id,
@@ -25,6 +23,7 @@ function delProduct(e) {
 
 $(document).on('click', '.addInOrder', function() {
     addProduct(this);
+    $(this).html('Товар добавлен').removeClass('addInOrder');
 });
 
 $(document).on('click', '.delInOrder', function() {
