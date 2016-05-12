@@ -8,6 +8,9 @@
 ob_start();
 session_start();
 $dir = $_SERVER['DOCUMENT_ROOT'];
+IF($_SESSION['user']!='admin'){
+    header("Location: ../adm/");
+}
 require_once($dir . '/content/header.php');
 ?>
 <?php

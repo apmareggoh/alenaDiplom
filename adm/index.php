@@ -15,7 +15,7 @@ if($_POST['name']){
     if($_POST['name']==admin && $_POST['pass']==admin)
     {$_SESSION['user']="admin";
     header("Location: /adm/orders.php");}
-    else{
+else{
         header("Location: /adm/");}
 }
 if($_GET['exit']){
