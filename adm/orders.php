@@ -69,7 +69,7 @@ if ($DB->numRows() == 0) {
                     <div class="panel panel-49 panel-49-286334510 roundcorners">
 
 
-                        <h3 class="title"><a href="/">Наши предложения</a></h3>
+                        <h3 class="title"><a href="/">Наши заказы</a></h3>
 
                         <div class="panel-body">
                             <div style="overflow:hidden;">
