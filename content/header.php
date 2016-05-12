@@ -2,7 +2,7 @@
 session_start();
 /**
  * Created by PhpStorm.
- * User: apmareggoh
+ * User: жыр
  * Date: 07.04.2016
  * Time: 0:48
  */
@@ -62,11 +62,11 @@ function translit($str)
     <div class="closed-margin">
         <div class="closed-box" id="closed_box">
             <div id="header" class="pnged">
-                <a id="logo" href="/" title="Магазин Косметики">
-                    Магазин лаков
+                <a id="logo" href="/" title="Магазин товаров для ногтей профессионального пользования">
+                    Товары для маникюра
                 </a>
-                <div id="phone"><span>+7 (495)</span> 123-45-67</div>
-                <div id="slogan">Магазин лаков и маникюрных принадлежностей</div>
+                <div id="phone"><span>+7 (900)</span> 123-45-67</div>
+                <div id="slogan">Магазин товаров для ногтей для профессионального использования</div>
                 <div id="cart"><a href="/order.php">Корзина покупок</a></div>
                 <?IF($_SESSION['user']=='admin'){?><div id="cart" style="margin-top: 30px"><a href="/adm/index.php?exit=1">Выход</a></div><?}?>
                 <div id="img_h"></div>

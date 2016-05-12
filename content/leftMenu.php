@@ -41,20 +41,20 @@
 
             <div class="basic-featured-news-item adv-featured-news-item-286289044" style="min-height:80px;">
                 <div Style="margin: 0px 20px 10px 0px;float:left;">
-                    <a class="mphoto box" style="width:80px;height:60px;" href="_25d0_259d_25d0_25be_25d0_25b2_25d0_25be_25d1_2581_25d1_2582_25d0_25b8/_25d0_25a1_25d0_25ba_25d0_25b0f1a48a837.htm" title="Снижение цен!">
-                        <img style="width:80px;height:60px;" src="users/3319/photos/news/03d2471b-cc63-495f-a200-aff1eb2c8678.jpg" alt="Снижение цен!" title="Снижение цен!" />
+                    <a class="mphoto box" style="width:80px;height:60px;" href="_25d0_259d_25d0_25be_25d0_25b2_25d0_25be_25d1_2581_25d1_2582_25d0_25b8/_25d0_25a1_25d0_25ba_25d0_25b0f1a48a837.htm" title="Выгодная цена!">
+                        <img style="width:80px;height:60px;" src="users/3319/photos/news/03d2471b-cc63-495f-a200-aff1eb2c8678.jpg" alt="Выгодная цена!" title="Выгодная цена!" />
                     </a>
                 </div>
 
                 <div class="blog-preview">
-                    <p class="blog-title"><a href="_25d0_259d_25d0_25be_25d0_25b2_25d0_25be_25d1_2581_25d1_2582_25d0_25b8/_25d0_25a1_25d0_25ba_25d0_25b0f1a48a837.htm">Снижение цен!</a></p>
+                    <p class="blog-title"><a href="_25d0_259d_25d0_25be_25d0_25b2_25d0_25be_25d1_2581_25d1_2582_25d0_25b8/_25d0_25a1_25d0_25ba_25d0_25b0f1a48a837.htm">Выгодная цена!</a></p>
                     <p class="blog-text">
-                        Уважаемые клиенты! Рады сообщить Вам о снижении цен на новый каталог продукции. Скидки составляют до 20% за покупку на сумму от 500 рублей.&nbsp;
+                        Уважаемые клиенты! Рады сообщить Вам о снижении цен на весь каталог продукции. Скидка составляет 5%. Акция продлится до конца месяца!.&nbsp;
                         Мы готовы предоставить Вам каталоги на продукцию по заказу на сайте. ...
                         <a class="more more-news" href="_25d0_259d_25d0_25be_25d0_25b2_25d0_25be_25d1_2581_25d1_2582_25d0_25b8/_25d0_25a1_25d0_25ba_25d0_25b0f1a48a837.htm">подробнее &raquo;</a>
                     </p>
                     <p class="blog-info" Style="font-weight:bold;">
-                        11.01.2012, 17:02
+                        1.05.2016, 17:02
 
 
 
@@ -76,15 +76,15 @@
 
         <h3 class="title">
 
-            <a>Говорят наши клиенты</a>
+            <a>Отзывы</a>
 
         </h3>
 
         <div class="panel-body">
-            <div class="blog-text"><p>"<i>Очень радует, что косметику нельзя приобрести в розничной торговле и по-этому нет подделок на продукцию!</i>"&nbsp;</p>
+            <div class="blog-text"><p>"<i>Очень радует, что товары нельзя приобрести в розничной торговле и поэтому нет подделок на продукцию!</i>"&nbsp;</p>
                 <p style="text-align: right;">- Егорова&nbsp;Валерия</p>
                 <p>&nbsp;</p>
-                <p>"<i>Став сотрудником компании я не только познакомилась с качественной косметикой, но и преобрела друзей.</i>"&nbsp;</p>
+                <p>"<i>Заказав продукцию на вашем сайте, я убедилась в ее качестве и быстрой доставке.</i>"&nbsp;</p>
                 <p style="text-align: right;">- Василькова Юлия</p></div>
         </div>
     </div>
