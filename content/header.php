@@ -82,12 +82,10 @@ function translit($str)
 
                         <li id="menu_item_43827" class="mli pnged  <?= $_SERVER['REQUEST_URI']=='/about.php' ? 'activelink' : '' ?> ">
                             <a href="about.php">О нас</a>
-
                         </li>
 
-                        <li id="menu_item_43823" class="mli pnged">
-                            <a href="_25d0_259a_25d0_25be_25d0_25bd_25d1_2582_25d0_25b0_25d0_25ba_25d1_2582_25d1_258b.htm">Контакты</a>
-
+                        <li id="menu_item_43831" class="mli pnged <?= $_SERVER['REQUEST_URI']=='/catalog.php' ? 'activelink' : '' ?>">
+                            <a href="catalog.php">Каталог товаров</a>
                         </li>
 
                         <li id="menu_item_43830" class="mli pnged">
@@ -95,9 +93,8 @@ function translit($str)
 
                         </li>
 
-                        <li id="menu_item_43831" class="mli pnged">
-                            <a href="_25d0_259a_25d0_25b0_25d1_2582_25d0_25b0_25d0_25bb_25d0_25be_25d0_25b3-_25d1_2582_25d0_25be_25d0_25b2_25d0_25b0_25d1_2580_25d0_25be_25d0_25b2/default.htm">Каталог товаров</a>
-
+                        <li id="menu_item_43823" class="mli pnged <?= $_SERVER['REQUEST_URI']=='/contacts.php' ? 'activelink' : '' ?>">
+                            <a href="contacts.php">Контакты</a>
                         </li>
 
                     </ul>
