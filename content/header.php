@@ -77,7 +77,6 @@ function translit($str)
 
                         <li id="menu_item_43822" class="mli activelink pnged">
                             <a href="/">Главная</a>
-
                         </li>
 
                         <li id="menu_item_43827" class="mli pnged">
