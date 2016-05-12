@@ -24,6 +24,17 @@ global $dir;
 global $id;
 $res = '';
 
+function createSelectStat($id = 0) {
+    $DBStat = new DB();
+    $res = '';
+    $DBStat->Query('select * from categories');
+    while ($row = $DBStat->fetchArray()) {
+        $res .= '<option ' . ($row['id'] == $id ? 'selected="selected' : '') . ' value="' . $row['id'] .'">' . $row['name'] . '</option>';
+    }
+    $DBStat->close();
+    return $res;
+}
+
 $DB = new DB();
 $DB->Query('select * from products where id=' . $_GET['id']);
 $DB->close();
@@ -32,20 +43,26 @@ if ($DB->numRows() == 0) {
 } else {
     $row = $DB->fetchArray();
     $res = "
-    <label for='name'>Название</label><br>
-    <input name='name' id='name' value='{$row['name']}'>
-    <br>
-    <label for='price'>Цена</label><br>
-    <input name='price' id='price' value='{$row['price']}'>
-    <br>
-    <label for='image'>Картинко</label><br>
-    <input name='image' id='image' type='file'>
-    <br>
-    <label for='image'>Анонс</label><br>
-    <textarea>Говно ебаное</textarea>
-    <br>
-    <label for='image'>Детально</label><br>
-    <textarea>Говно ебаное</textarea>
+    <form>
+        <label for='name'>Название</label><br>
+        <input name='name' id='name' value='{$row['name']}'>
+        <br>
+        <label for='price'>Цена</label><br>
+        <input name='price' id='price' value='{$row['price']}'>
+        <br>
+        <label for='image'>Картинко</label><br>
+        <input name='image' id='image' type='file'>
+        <br>
+        <label for='image'>Анонс</label><br>
+        <textarea>{$row['anons']}</textarea>
+        <br>
+        <label for='image'>Детально</label><br>
+        <textarea>{$row['detail']}</textarea>
+        <label for='id_category'>Категория</label><br>
+        <select>" . createSelectStat($_GET['id']) ."</select>
+        <br>
+        <button>Сохранить</button>
+    </form>
     ";
 }
 ?>
