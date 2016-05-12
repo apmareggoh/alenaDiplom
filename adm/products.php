@@ -65,11 +65,6 @@ if ($DB->numRows() == 0) {
     <div class="main-area" id="main_area">
         <table class="table-content" cellpadding="0" cellspacing="0">
             <tr>
-
-                <?php
-                require_once($dir . '/content/leftMenu.php');
-                ?>
-
                 <td class="center-column">
 
 

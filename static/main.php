@@ -38,10 +38,10 @@ if ($DB->numRows() == 0) {
                                         </a>
                                     </div>
                                     <div class='blog-preview'>
-                                        <p class='blog-title'><a href='{$rowProduct['id']}-" . translit($rowProduct['name']) . "/'>{$rowProduct['name']}</a></p>
+                                        <p class='blog-title'><a href='/{$rowProduct['cid']}-{$rowProduct['url']}/{$rowProduct['id']}-" . translit($rowProduct['name']) . "/'>{$rowProduct['name']}</a></p>
                                         <p class='blog-text'>
                                             {$rowProduct['anons']}
-                                            <a class='more more-items' href='{$rowProduct['id']}-" . translit($rowProduct['name']) . "/'>подробнее &raquo;</a>
+                                            <a class='more more-items' href='/{$rowProduct['cid']}-{$rowProduct['url']}/{$rowProduct['id']}-" . translit($rowProduct['name']) . "/'>подробнее &raquo;</a>
                                         </p>
                                         <p class='blog-info' Style='font-weight:bold;'>
                                         </p>
