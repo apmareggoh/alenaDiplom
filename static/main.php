@@ -1,65 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: apmareggoh
- * Date: 07.04.2016
- * Time: 0:59
- */
-global $dir;
-global $id;
-$res = '';
-$DB = new DB();
-$DB->Query('CALL getProduct(' . (isset($id) ? $id : 'null') .')');
-$DB->close();
-if ($DB->numRows() == 0) {
-    $res = "no tovar";
-} else {
-    while ($rowProduct = $DB->fetchArray()) {
-        $DB2 = new DB();
-        $DB2->Query('select * from baskets b left JOIN products p on p.id = b.id_product where b.id_user="' . session_id() . '" and b.id_product=' . $rowProduct['id']);
-        if ($DB2->numRows()) {
-            $text = 'В корзине';
-            $cnt = $DB2->fetchArray();
-            $cnt = $cnt['cnt'];
-            $class = '';
-            $link = '/order.php';
-        } else {
-            $text = 'В корзину';
-            $cnt = 1;
-            $class = 'addInOrder';
-            $link = 'javascript:void(0);';
-        }
-       $res .= "
-                            <div class='basic-other-products-item  adv-other-products-item-286334510'>
-                                <div Style='margin-bottom:0px;min-height:170px;'>
-                                    <div Style='margin: 0px 20px 10px 0px;float:left;'>
-                                        <a class='mphoto box' style='width:150px;height:150px;' href='{$rowProduct['url']}/' title='{$rowProduct['name']}'>
-                                            <img style='width:150px;height:150px;' src='/img/product/{$rowProduct['image']}' alt='{$rowProduct['name']}' title='{$rowProduct['name']}' />
-                                        </a>
-                                    </div>
-                                    <div class='blog-preview'>
-                                        <p class='blog-title'><a href='/{$rowProduct['cid']}-{$rowProduct['url']}/{$rowProduct['id']}-" . translit($rowProduct['name']) . "/'>{$rowProduct['name']}</a></p>
-                                        <p class='blog-text'>
-                                            {$rowProduct['anons']}
-                                            <a class='more more-items' href='/{$rowProduct['cid']}-{$rowProduct['url']}/{$rowProduct['id']}-" . translit($rowProduct['name']) . "/'>подробнее &raquo;</a>
-                                        </p>
-                                        <p class='blog-info' Style='font-weight:bold;'>
-                                        </p>
-                                        <p class='blog-info' Style='font-weight:bold;'>Есть в наличии</p>
-                                        <p class='blog-text' Style='font-weight:bold;'>
-                                        <label for='count_{$rowProduct['id']}'>Колво</label>
-                                        <input style='width:20px;' name='count' id='count_{$rowProduct['id']}' value='{$cnt}'>
-                                            <a href='{$link}' data-id='{$rowProduct['id']}' class='lnk-products-list-addtocart {$class}'>{$text}</a>
-
-                                            <span class='discount-price'>{$rowProduct['price']}</span> <span class='end-price'>" . ($rowProduct['price'] * 0.95) . "</span> руб
-                                        </p>
-                                    </div>
-
-                                </div>
-                            </div>";
-    }
-}
-?>
 <div class="main-area" id="main_area">
     <table class="table-content" cellpadding="0" cellspacing="0">
         <tr>
@@ -71,17 +9,15 @@ if ($DB->numRows() == 0) {
             <td class="center-column">
 
 
-                <div class="panel panel-49 panel-49-286334510 roundcorners">
+                <div class="panel pagecontentall panel-pagecontent-90157 roundcorners">
 
 
-                    <h3 class="title"><a href="/">Наши предложения</a></h3>
-
+                    <h1 class="title" title="О нас">Главная</h1>
                     <div class="panel-body">
-                        <div style="overflow:hidden;">
-
-                            <?=$res;?>
-
-                        </div>
+                        <img src="/img/preved.jpg">
+                        <div class="blog-text"><p style="FONT-SIZE: 16px"><strong>Компания Cosmetika</strong></p>
+                            <p>На протяжении долгого времени наша компания помогает женщинам выглядеть на все 100%. Сегодня наша продукция насчитывает более 150 наименований.</p>
+                            <p>Приобрести косметику вы можете только у наших представителей у себя в городе или став нашим представителем. Работа в нашей фирме - это сободный график, дополнительный заработок и независимоть от других.</p></div>
                     </div>
                 </div>
             </td>
