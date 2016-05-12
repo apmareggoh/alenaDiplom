@@ -42,7 +42,7 @@ function translit($str)
 
     <link rel="stylesheet" type="text/css" href="/users/3319/css/global.css" />
 <!--    <link rel="stylesheet" type="text/css" href="/css/gallery.css@7.css" />-->
-    [if IE]><!--<link rel="stylesheet" type="text/css" href="/css/ie.css@7.css" />--><![endif]
+<!--    [if IE]><!--<link rel="stylesheet" type="text/css" href="/css/ie.css@7.css" />--><![endif]-->
 
 <!--    <script type="text/javascript" src="/js/prototype.js"></script>-->
     <script type="text/javascript" src="/js/jquery.js"></script>

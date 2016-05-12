@@ -1,3 +1,4 @@
 RewriteEngine on
 RewriteRule ^(([0-9]+)-[a-zA-Z0-9_-]+)/([0-9]+)-([a-zA-Z0-9_-]+)/$ product.php?id=$3
 RewriteRule ^([0-9]+)-([a-zA-Z0-9_-]+)/$ index.php?id=$1
+AddDefaultCharset UTF-8
