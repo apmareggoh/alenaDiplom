@@ -9,7 +9,7 @@
 
 <div id="footer">
 <div class="footer">
-    <center><a href="about.htm">О нас</a> &nbsp;&bull;&nbsp; <a href="contacts.htm">Контакты</a> &nbsp;&nbsp;&nbsp;&copy; 2012 &laquo;Cosmetika&raquo; - Все права защищены.</center>
+    <center><a href="about.htm">Рћ РЅР°СЃ</a> &nbsp;&bull;&nbsp; <a href="contacts.htm">РљРѕРЅС‚Р°РєС‚С‹</a> &nbsp;&nbsp;&nbsp;&copy; 2012 &laquo;Cosmetika&raquo; - Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</center>
 
 
 </div>
