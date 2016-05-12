@@ -71,17 +71,17 @@ function translit($str)
                 <?IF($_SESSION['user']=='admin'){?><div id="cart" style="margin-top: 30px"><a href="/adm/index.php?exit=1">Выход</a></div><?}?>
                 <div id="img_h"></div>
             </div>
-
+            <?php IF(strpos($_SERVER['REQUEST_URI'],'adm/') != true) {?>
             <div class="tmenu pnged">
                 <div class="hmenu-container">
                     <ul id="page_tabs" class="page_tabs">
 
-                        <li id="menu_item_43822" class="mli activelink pnged">
+                        <li id="menu_item_43822" class="mli pnged  <?= $_SERVER['REQUEST_URI']=='/' ? 'activelink' : '' ?> ">
                             <a href="/">Главная</a>
                         </li>
 
-                        <li id="menu_item_43827" class="mli pnged">
-                            <a href="about.htm">О нас</a>
+                        <li id="menu_item_43827" class="mli pnged  <?= $_SERVER['REQUEST_URI']=='/about.php' ? 'activelink' : '' ?> ">
+                            <a href="about.php">О нас</a>
 
                         </li>
 
@@ -102,4 +102,23 @@ function translit($str)
 
                     </ul>
                 </div>
+                <?php
+                }
+                else{?>
+                <div class="tmenu pnged">
+                    <div class="hmenu-container">
+                        <ul id="page_tabs" class="page_tabs">
+
+                            <li id="menu_item_43822" class="mli pnged <?= $_SERVER['REQUEST_URI']=='/adm/orders.php' ? "activelink" : "" ?> ">
+                                <a href="/adm/orders.php">Заказы</a>
+                            </li>
+
+                            <li id="menu_item_43827" class="mli pnged  <?= $_SERVER['REQUEST_URI']=='/adm/products.php' ? 'activelink' : '' ?> ">
+                                <a href="/adm/products.php">Продукты</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <?php }?>
             </div>
