@@ -18,9 +18,9 @@ require_once($dir . '/content/header.php');?>
                 <div class="panel pagecontentall panel-pagecontent-90157 roundcorners">
 
 
-                    <h1 class="title" title="О нас">Таки контакты</h1>
+                    <h1 class="title" title="О нас">Наши контакты</h1>
                     <div class="panel-body">
-                        <div class="blog-text"><p style="FONT-SIZE: 16px"><strong>Компания Cosmetika</strong></p>
+                        <div class="blog-text"><p style="FONT-SIZE: 16px"><strong>Интернет-магазин "Товары для маникюра"</strong></p>
                             <p>Адрес Адрес Адрес Адрес Адрес Адрес Адрес Адрес Адрес Адрес Адрес Адрес Адрес </p>
                             <p>Телефон Телефон Телефон Телефон Телефон Телефон Телефон Телефон Телефон Телефон Телефон </p></div>
                     </div>
