@@ -21,7 +21,7 @@ if ($_GET['delete']) {
     if (is_uploaded_file($_FILES["image"]["tmp_name"])) {
         $ext = substr($_FILES["image"]["name"], strpos($_FILES["image"]["name"], '.'), strlen($_FILES["image"]["name"]) - 1);
         $xxx = time() . "1" . $ext;
-        move_uploaded_file($_FILES['image']['tmp_name'], $dir . "/img/product/" . $xxx);
+        move_uploaded_file($_FILES['image']['tmp_name'], $dir . "/img/news/" . $xxx);
     } else {
         $xxx = '';
     }
