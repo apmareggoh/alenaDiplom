@@ -36,7 +36,7 @@ if ($DB->numRows() == 1) {
                     <div class="panel-body" style="margin-top: 2px">
                         <div style="margin-top:20px;min-height:200px;">
                             <div style="float:left;margin-right:20px;margin-bottom:20px;height:180px;10">
-                                <img src="<?=$rowNew['image'];?>" class="detailed-photo" alt="<?=$rowNew['name'];?>">
+                                <img src="/img/news/<?=$rowNew['image'];?>" class="detailed-photo" alt="<?=$rowNew['name'];?>">
                             </div>
                             <div class="blog-preview">
                                 <div class="blog-text"><?=$rowNew['detail'];?></div>
