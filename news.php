@@ -1,16 +1,13 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: армагеддон
+ * User: Р°СЂРјР°РіРµРґРґРѕРЅ
  * Date: 09.05.2016
  * Time: 19:01
  */
 ob_start();
 session_start();
 $dir = $_SERVER['DOCUMENT_ROOT'];
-IF($_SESSION['user']!='admin'){
-    header("Location: ../adm/");
-}
 require_once($dir . '/content/header.php');
 ?>
 <?php
@@ -43,7 +40,7 @@ $DB->Query('select p.id,
        c.url from products p left JOIN categories c on p.id_category=c.id');
 $DB->close();
 if ($DB->numRows() == 0) {
-    $res = "Продуктов нет!";
+    $res = "РџСЂРѕРґСѓРєС‚РѕРІ РЅРµС‚!";
 } else {
     while ($row = $DB->fetchArray()) {
         $res .= "
@@ -51,10 +48,10 @@ if ($DB->numRows() == 0) {
                             <table width='100%'>
                             <tr>
                             <td width='50%'>
-                            <p>Товар номер {$row['id']}</p>
-                            <p>Категория {$row['cname']}</p>
+                            <p>РўРѕРІР°СЂ РЅРѕРјРµСЂ {$row['id']}</p>
+                            <p>РљР°С‚РµРіРѕСЂРёСЏ {$row['cname']}</p>
                             <p>{$row['name']}</p>
-                            <p><a href='/adm/product.php?id={$row['id']}'>Редактировать</a></p>
+                            <p><a href='/adm/product.php?id={$row['id']}'>Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ</a></p>
                             </td>
                             <td>
                             <p><img width='200px' src='/img/product/{$row['image']}'/></p>
@@ -74,7 +71,7 @@ if ($DB->numRows() == 0) {
                     <div class="panel panel-49 panel-49-286334510 roundcorners">
 
 
-                        <h3 class="title"><a href="/">Редактирование товаров</a></h3>
+                        <h3 class="title"><a href="/">Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ С‚РѕРІР°СЂРѕРІ</a></h3>
 
                         <div class="panel-body">
 
@@ -82,17 +79,17 @@ if ($DB->numRows() == 0) {
 
                             <div class="basic-featured-news-item adv-featured-news-item-286289044" style="min-height:80px;">
                                 <div Style="margin: 0px 20px 10px 0px;float:left;">
-                                    <a class="mphoto box" style="width:80px;height:60px;" href="_25d0_25a1_25d0_25ba_25d0_25b0f1a48a837.htm" title="Снижение цен!">
-                                        <img style="width:80px;height:60px;" src="../users/3319/photos/news/03d2471b-cc63-495f-a200-aff1eb2c8678.jpg" alt="Снижение цен!" title="Снижение цен!" />
+                                    <a class="mphoto box" style="width:80px;height:60px;" href="_25d0_25a1_25d0_25ba_25d0_25b0f1a48a837.htm" title="РЎРЅРёР¶РµРЅРёРµ С†РµРЅ!">
+                                        <img style="width:80px;height:60px;" src="../users/3319/photos/news/03d2471b-cc63-495f-a200-aff1eb2c8678.jpg" alt="РЎРЅРёР¶РµРЅРёРµ С†РµРЅ!" title="РЎРЅРёР¶РµРЅРёРµ С†РµРЅ!" />
                                     </a>
                                 </div>
 
                                 <div class="blog-preview">
-                                    <p class="blog-title"><a href="_25d0_25a1_25d0_25ba_25d0_25b0f1a48a837.htm">Снижение цен!</a></p>
+                                    <p class="blog-title"><a href="_25d0_25a1_25d0_25ba_25d0_25b0f1a48a837.htm">РЎРЅРёР¶РµРЅРёРµ С†РµРЅ!</a></p>
                                     <p class="blog-text">
-                                        Уважаемые клиенты! Рады сообщить Вам о снижении цен на новый каталог продукции. Скидки составляют до 20% за покупку на сумму от 500 рублей.&nbsp;
-                                        Мы готовы предоставить Вам каталоги на продукцию по заказу на сайте. ...
-                                        <a class="more more-news" href="_25d0_25a1_25d0_25ba_25d0_25b0f1a48a837.htm">подробнее &raquo;</a>
+                                        РЈРІР°Р¶Р°РµРјС‹Рµ РєР»РёРµРЅС‚С‹! Р Р°РґС‹ СЃРѕРѕР±С‰РёС‚СЊ Р’Р°Рј Рѕ СЃРЅРёР¶РµРЅРёРё С†РµРЅ РЅР° РЅРѕРІС‹Р№ РєР°С‚Р°Р»РѕРі РїСЂРѕРґСѓРєС†РёРё. РЎРєРёРґРєРё СЃРѕСЃС‚Р°РІР»СЏСЋС‚ РґРѕ 20% Р·Р° РїРѕРєСѓРїРєСѓ РЅР° СЃСѓРјРјСѓ РѕС‚ 500 СЂСѓР±Р»РµР№.&nbsp;
+                                        РњС‹ РіРѕС‚РѕРІС‹ РїСЂРµРґРѕСЃС‚Р°РІРёС‚СЊ Р’Р°Рј РєР°С‚Р°Р»РѕРіРё РЅР° РїСЂРѕРґСѓРєС†РёСЋ РїРѕ Р·Р°РєР°Р·Сѓ РЅР° СЃР°Р№С‚Рµ. ...
+                                        <a class="more more-news" href="_25d0_25a1_25d0_25ba_25d0_25b0f1a48a837.htm">РїРѕРґСЂРѕР±РЅРµРµ &raquo;</a>
                                     </p>
                                     <p class="blog-info" Style="font-weight:bold;">
                                         11.01.2012, 17:02

@@ -25,25 +25,10 @@ global $id;
 $res = '';
 
 $DB = new DB();
-$DB->Query('select p.id,
-       p.name,
-       p.price,
-       p.image,
-       p.anons,
-       p.detail,
-       p.weight,
-       p.id_provider,
-       p.id_category,
-       p.deleted,
-       c.id AS cid,
-       c.name AS cname,
-       c.image AS cimage,
-       c.anons AS canons,
-       c.detail as cdetail,
-       c.url from products p left JOIN categories c on p.id_category=c.id');
+$DB->Query('select * from categories');
 $DB->close();
 if ($DB->numRows() == 0) {
-    $res = "Продуктов нет!";
+    $res = "Категорий нет!";
 } else {
     while ($row = $DB->fetchArray()) {
         $res .= "
@@ -51,11 +36,11 @@ if ($DB->numRows() == 0) {
                             <table width='100%'>
                             <tr>
                             <td width='50%'>
-                            <p>Товар номер {$row['id']}</p>
-                            <p>Категория {$row['cname']}</p>
+                            <p>Категория номер {$row['id']}</p>
                             <p>{$row['name']}</p>
-                            <p><a href='/adm/product.php?id={$row['id']}'>Редактировать</a></p>
-                            <p><a href='/adm/productSave.php?delete=1&id={$row['id']}'>Удалить</a></p>
+                            <p>{$row['url']}</p>
+                            <p><a href='/adm/category.php?id={$row['id']}'>Редактировать</a></p>
+                            <p><a href='/adm/caterorySave.php?delete=1&id={$row['id']}'>Удалить</a></p>
                             </td>
                             <td>
                             <p><img width='200px' src='/img/product/{$row['image']}'/></p>
@@ -65,7 +50,7 @@ if ($DB->numRows() == 0) {
                             </div>";
     }
 }
-$res .= '<br><a href="product.php">Добавить товар</a>'
+$res .= '<br><a href="category.php">Добавить товар</a>'
 ?>
 
     <div class="main-area" id="main_area">
@@ -77,7 +62,7 @@ $res .= '<br><a href="product.php">Добавить товар</a>'
                     <div class="panel panel-49 panel-49-286334510 roundcorners">
 
 
-                        <h3 class="title"><a href="/">Редактирование товаров</a></h3>
+                        <h3 class="title"><a href="/">Редактирование категорий</a></h3>
 
                         <div class="panel-body">
                             <div style="overflow:hidden;">

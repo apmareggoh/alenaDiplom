@@ -114,6 +114,14 @@ function translit($str)
                                 <a href="/adm/products.php">Продукты</a>
                             </li>
 
+                            <li id="menu_item_43827" class="mli pnged  <?= $_SERVER['REQUEST_URI']=='/adm/categories.php' ? 'activelink' : '' ?> ">
+                                <a href="/adm/categories.php">Категории</a>
+                            </li>
+
+                            <li id="menu_item_43827" class="mli pnged  <?= $_SERVER['REQUEST_URI']=='/adm/news.php' ? 'activelink' : '' ?> ">
+                                <a href="/adm/news.php">Новости</a>
+                            </li>
+
                         </ul>
                     </div>
                 </div>

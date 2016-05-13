@@ -24,20 +24,9 @@ global $dir;
 global $id;
 $res = '';
 
-function createSelectStat($id = 0) {
-    $DBStat = new DB();
-    $res = '';
-    $DBStat->Query('select * from categories');
-    while ($row = $DBStat->fetchArray()) {
-        $res .= '<option ' . ($row['id'] == $id ? 'selected="selected"' : '') . ' value="' . $row['id'] .'">' . $row['name'] . '</option>';
-    }
-    $DBStat->close();
-    return $res;
-}
-
 if ($_GET['id']) {
     $DB = new DB();
-    $DB->Query('select * from products where id=' . $_GET['id']);
+    $DB->Query('select * from news where id=' . $_GET['id']);
     $DB->close();
     $row = $DB->fetchArray();
 } else {
@@ -46,14 +35,14 @@ if ($_GET['id']) {
 //if (!$_GET['id'] || $DB->numRows() == 0) {
 //   // $res = "Продуктов нет!";
 //} else {
-    $res = "
-    <form method='post' action='productSave.php' enctype='multipart/form-data'>
+$res = "
+    <form method='post' action='newsSave.php' enctype='multipart/form-data'>
         <input name='id' id='id' type='hidden' value='{$row['id']}'>
         <label for='name'>Название</label><br>
         <input name='name' id='name' value='{$row['name']}'>
         <br>
-        <label for='price'>Цена</label><br>
-        <input name='price' id='price' value='{$row['price']}'>
+        <label for='url'>Дата</label><br>
+        <input name='url' id='url' value='{$row['dt']}'>
         <br>
         <label for='image'>Картинко</label><br>
         <input name='image' id='image' type='file'>
@@ -63,8 +52,6 @@ if ($_GET['id']) {
         <br>
         <label for='detail'>Детально</label><br>
         <textarea name='detail' id='detail' >{$row['detail']}</textarea>
-        <label for='id_category'>Категория</label><br>
-        <select name='id_category' id='id_category'>" . createSelectStat($_GET['id_category']) ."</select>
         <br>
         <button>Сохранить</button>
     </form>
@@ -80,7 +67,7 @@ if ($_GET['id']) {
                     <div class="panel panel-49 panel-49-286334510 roundcorners">
 
 
-                        <h3 class="title"><a href="/">Редактирование товаров</a></h3>
+                        <h3 class="title"><a href="/">Редактирование новости</a></h3>
 
                         <div class="panel-body">
                             <div style="overflow:hidden;">
