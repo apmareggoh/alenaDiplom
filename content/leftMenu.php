@@ -38,34 +38,57 @@
         <div class="panel-body">
 
 
+            <?php
+            $DB = new DB();
+            $DB->Query('select * from news ORDER BY id DESC LIMIT 2');
+            $DB->close();
+            if ($DB->numRows()) {
+                while ($row = $DB->fetchArray()) {
+                    echo '
+                        <div class="basic-featured-news-item adv-featured-news-item-286289044" style="min-height:80px;">
+                            <div Style="margin: 0px 20px 10px 0px;float:left;">
+                                <a class="mphoto box" style="width:80px;height:60px;" href="news/'.$row['id'].' - '.translit($row['name']).'" title="'.$row['name'].'">
+                                    <img style="width:80px;height:60px;" src="/img/news/'.$row['image'].'" alt="'.$row['name'].'" title="'.$row['name'].'" />
+                                </a>
+                            </div>
 
-            <div class="basic-featured-news-item adv-featured-news-item-286289044" style="min-height:80px;">
-                <div Style="margin: 0px 20px 10px 0px;float:left;">
-                    <a class="mphoto box" style="width:80px;height:60px;" href="_25d0_259d_25d0_25be_25d0_25b2_25d0_25be_25d1_2581_25d1_2582_25d0_25b8/_25d0_25a1_25d0_25ba_25d0_25b0f1a48a837.htm" title="Выгодная цена!">
-                        <img style="width:80px;height:60px;" src="users/3319/photos/news/03d2471b-cc63-495f-a200-aff1eb2c8678.jpg" alt="Выгодная цена!" title="Выгодная цена!" />
-                    </a>
-                </div>
-
-                <div class="blog-preview">
-                    <p class="blog-title"><a href="_25d0_259d_25d0_25be_25d0_25b2_25d0_25be_25d1_2581_25d1_2582_25d0_25b8/_25d0_25a1_25d0_25ba_25d0_25b0f1a48a837.htm">Выгодная цена!</a></p>
-                    <p class="blog-text">
-                        Уважаемые клиенты! Рады сообщить Вам о снижении цен на весь каталог продукции. Скидка составляет 5%. Акция продлится до конца месяца!.&nbsp;
-                        Мы готовы предоставить Вам каталоги на продукцию по заказу на сайте. ...
-                        <a class="more more-news" href="_25d0_259d_25d0_25be_25d0_25b2_25d0_25be_25d1_2581_25d1_2582_25d0_25b8/_25d0_25a1_25d0_25ba_25d0_25b0f1a48a837.htm">подробнее &raquo;</a>
-                    </p>
-                    <p class="blog-info" Style="font-weight:bold;">
-                        1.05.2016, 17:02
-
-
+                            <div class="blog-preview">
+                                <p class="blog-title"><a href="'.$row['id'].' - '.translit($row['name']).'">'.$row['name'].'</a></p>
+                                <p class="blog-text">
+                                    '.$row['anons'].'
+                                    <a class="more more-news" href="'.$row['id'].' - '.translit($row['name']).'">подробнее &raquo;</a>
+                                </p>
+                                <p class="blog-info" Style="font-weight:bold;">
+                                    1.05.2016, 17:02
+                                </p>
+                            </div>
+                        </div>';
+                }
+            } else {
+                echo 'На данный момент новостей нет';
+            }
+            ?>
 
 
-
-                    </p>
-
-
-                </div>
-
-            </div>
+<!--            <div class="basic-featured-news-item adv-featured-news-item-286289044" style="min-height:80px;">-->
+<!--                <div Style="margin: 0px 20px 10px 0px;float:left;">-->
+<!--                    <a class="mphoto box" style="width:80px;height:60px;" href="_25d0_259d_25d0_25be_25d0_25b2_25d0_25be_25d1_2581_25d1_2582_25d0_25b8/_25d0_25a1_25d0_25ba_25d0_25b0f1a48a837.htm" title="Выгодная цена!">-->
+<!--                        <img style="width:80px;height:60px;" src="users/3319/photos/news/03d2471b-cc63-495f-a200-aff1eb2c8678.jpg" alt="Выгодная цена!" title="Выгодная цена!" />-->
+<!--                    </a>-->
+<!--                </div>-->
+<!---->
+<!--                <div class="blog-preview">-->
+<!--                    <p class="blog-title"><a href="_25d0_259d_25d0_25be_25d0_25b2_25d0_25be_25d1_2581_25d1_2582_25d0_25b8/_25d0_25a1_25d0_25ba_25d0_25b0f1a48a837.htm">Выгодная цена!</a></p>-->
+<!--                    <p class="blog-text">-->
+<!--                        Уважаемые клиенты! Рады сообщить Вам о снижении цен на весь каталог продукции. Скидка составляет 5%. Акция продлится до конца месяца!.&nbsp;-->
+<!--                        Мы готовы предоставить Вам каталоги на продукцию по заказу на сайте. ...-->
+<!--                        <a class="more more-news" href="_25d0_259d_25d0_25be_25d0_25b2_25d0_25be_25d1_2581_25d1_2582_25d0_25b8/_25d0_25a1_25d0_25ba_25d0_25b0f1a48a837.htm">подробнее &raquo;</a>-->
+<!--                    </p>-->
+<!--                    <p class="blog-info" Style="font-weight:bold;">-->
+<!--                        1.05.2016, 17:02-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--            </div>-->
 
 
 
