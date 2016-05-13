@@ -81,20 +81,20 @@ function translit($str)
                         </li>
 
                         <li id="menu_item_43827" class="mli pnged  <?= $_SERVER['REQUEST_URI']=='/about.php' ? 'activelink' : '' ?> ">
-                            <a href="about.php">О нас</a>
+                            <a href="/about.php">О нас</a>
                         </li>
 
                         <li id="menu_item_43831" class="mli pnged <?= $_SERVER['REQUEST_URI']=='/catalog.php' ? 'activelink' : '' ?>">
-                            <a href="catalog.php">Каталог товаров</a>
+                            <a href="/catalog.php">Каталог товаров</a>
                         </li>
 
-                        <li id="menu_item_43830" class="mli pnged">
-                            <a href="_25d0_259d_25d0_25be_25d0_25b2_25d0_25be_25d1_2581_25d1_2582_25d0_25b8/default.htm">Новости</a>
+                        <li id="menu_item_43830" class="mli pnged <?= $_SERVER['REQUEST_URI']=='/news.php' ? 'activelink' : '' ?>">
+                            <a href="/news.php">Новости</a>
 
                         </li>
 
                         <li id="menu_item_43823" class="mli pnged <?= $_SERVER['REQUEST_URI']=='/contacts.php' ? 'activelink' : '' ?>">
-                            <a href="contacts.php">Контакты</a>
+                            <a href="/contacts.php">Контакты</a>
                         </li>
 
                     </ul>
