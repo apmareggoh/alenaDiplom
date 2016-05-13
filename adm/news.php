@@ -43,7 +43,7 @@ if ($DB->numRows() == 0) {
                             <p><a href='/adm/newsSave.php?delete=1&id={$row['id']}'>Удалить</a></p>
                             </td>
                             <td>
-                            <p><img width='200px' src='/img/product/{$row['image']}'/></p>
+                            <p><img width='200px' src='/img/news/{$row['image']}'/></p>
                             </td>
                             </tr>
                             </table>
