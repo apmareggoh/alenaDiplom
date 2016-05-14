@@ -5,9 +5,9 @@
  * Date: 09.05.2016
  * Time: 19:01
 */
+$dir = $_SERVER['DOCUMENT_ROOT'];
 ob_start();
 session_start();
-$dir = $_SERVER['DOCUMENT_ROOT'];
 require_once($dir . '/content/header.php');
 ?>
 <?php
@@ -31,7 +31,6 @@ $DB = new DB();
        p.price,
        p.image,
        p.anons,
-       p.detail,
        p.weight,
        p.id_provider,
        p.id_category,
@@ -70,7 +69,7 @@ if ($DB->numRows() == 0) {
                                         <p class='blog-text' Style='font-weight:bold;'>
                                             <a href='javascript:void(0);' data-id='{$rowProduct['cId']}' class='lnk-products-list-addtocart delInOrder'>Удалить</a>
 
-                                            <span class='discount-price'>{$rowProduct['price']}</span> <span class='end-price'>" . ($rowProduct['price'] * 0.95) . "</span> руб
+                                            <span class='discount-price'>{$rowProduct['price']}</span> <span class='end-price'>" . round($rowProduct['price'] * 0.95,2) . "</span> руб
                                         </p>
                                     </div>
 
@@ -109,6 +108,10 @@ if ($DB->numRows() == 0) {
                                 <br>
                                 <input name="surname" id="surname">
                                 <br>
+                                <label for="middlename">Отчество</label>
+                                <br>
+                                <input name="middlename" id="middlename">
+                                <br>
                                 <label for="phones">Телефон</label>
                                 <br>
                                 <input name="phones" id="phones">
@@ -122,7 +125,7 @@ if ($DB->numRows() == 0) {
                                 <select name="pay_method" id="pay_method">
                                     <option value="1">Наличными при получении</option>
                                     <option value="2">Банковской картой при получении</option>
-                                    <option value="3">Банковской картой онлайн</option>
+                                    <option value="3">Банковским переводом</option>
                                 </select>
                                 <br>
                                 <label for="id_item">Пункт доставки</label>

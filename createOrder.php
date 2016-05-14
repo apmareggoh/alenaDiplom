@@ -36,6 +36,16 @@ while ($row = $DB->fetchArray()) {
 $DB->Query('delete from baskets where id_user="' . session_id() . '"');
 $DB->close();
 $res .= 'Ваш номер заказа - ' . $last_id . '.';
+
+IF($_POST['pay_method']==3){
+    $res .= '<br>
+    <form action="/PrintOrder.php" method="POST">
+    <input type="hidden" name="fio" value="'.$_POST['surname'] .' '. $_POST['name'] .' '. $_POST['middlename'] .'">
+    <input type="hidden" name="summ" value="'.$summ.'">
+    <input type="hidden" name="id_order" value="'.$last_id.'">
+    <input type="submit" value="Распечатать квитанцию">
+    </form>';
+}
 ?>
     <div class="main-area" id="main_area">
         <table class="table-content" cellpadding="0" cellspacing="0">
@@ -55,7 +65,6 @@ $res .= 'Ваш номер заказа - ' . $last_id . '.';
 
                         <div class="panel-body">
                             <div style="overflow:hidden;">
-
                                 <?=$res;?>
                                 <br>
                                 <a href="/">На главную</a>

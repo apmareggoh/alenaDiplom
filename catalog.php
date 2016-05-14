@@ -1,11 +1,11 @@
 <?php
+ob_start();
+session_start();
 $id = $_GET['id'];
 $dir = $_SERVER['DOCUMENT_ROOT'];
 require_once($dir . '/content/header.php');
 global $dir;
 global $id;
-ob_start();
-session_start();
 $res = '';
 $DB = new DB();
 $DB->Query('CALL getProduct(' . (isset($id) ? $id : 'null') .')');
@@ -50,7 +50,7 @@ if ($DB->numRows() == 0) {
                                         <input style='width:20px;' name='count' id='count_{$rowProduct['id']}' value='{$cnt}'>
                                             <a href='{$link}' data-id='{$rowProduct['id']}' class='lnk-products-list-addtocart {$class}'>{$text}</a>
 
-                                            <span class='discount-price'>{$rowProduct['price']}</span> <span class='end-price'>" . ($rowProduct['price'] * 0.95) . "</span> руб
+                                            <span class='discount-price'>{$rowProduct['price']}</span> <span class='end-price'>" . round($rowProduct['price'] * 0.95,2) . "</span> руб
                                         </p>
                                     </div>
 
