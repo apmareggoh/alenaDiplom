@@ -33,7 +33,7 @@
     <div class="panel panel-18 roundcorners">
 
 
-        <h3 class="title"><a href="_25d0_259d_25d0_25be_25d0_25b2_25d0_25be_25d1_2581_25d1_2582_25d0_25b8/default.htm">Наши акции!</a></h3>
+        <h3 class="title"><a href="/news.php">Новости и акции!</a></h3>
 
         <div class="panel-body">
 

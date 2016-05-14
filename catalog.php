@@ -4,6 +4,8 @@ $dir = $_SERVER['DOCUMENT_ROOT'];
 require_once($dir . '/content/header.php');
 global $dir;
 global $id;
+ob_start();
+session_start();
 $res = '';
 $DB = new DB();
 $DB->Query('CALL getProduct(' . (isset($id) ? $id : 'null') .')');
@@ -71,7 +73,7 @@ if ($DB->numRows() == 0) {
                 <div class="panel panel-49 panel-49-286334510 roundcorners">
 
 
-                    <h3 class="title"><a href="">Наши предложения</a></h3>
+                    <h3 class="title"><a>Наши предложения</a></h3>
 
                     <div class="panel-body">
                         <div style="overflow:hidden;">
