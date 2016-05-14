@@ -130,7 +130,7 @@ if ($DB->numRows() == 0) {
                                 <select name="id_item" id="id_item">
                                     <?php
                                     $DB2 = new DB();
-                                    $DB2->Query('select * from orders_items');
+                                    $DB2->Query('select * from orders_items where active');
                                     if ($DB2->numRows()) {
                                         while ($rowDelivery = $DB2->fetchArray()) {
                                             echo "<option value='{$rowDelivery['id']}'>{$rowDelivery['adress']}</option>";
