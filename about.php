@@ -1,7 +1,8 @@
 <?php
 $id = $_GET['id'];
 $dir = $_SERVER['DOCUMENT_ROOT'];
-require_once($dir . '/content/header.php');?>
+require_once($dir . '/content/header.php');
+?>
 
 
 <div class="main-area" id="main_area">
